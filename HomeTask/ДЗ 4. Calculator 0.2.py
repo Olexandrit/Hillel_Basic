@@ -1,19 +1,43 @@
 
 def calculator():
 
-    print("Вас вітає НеЙмОвІрНиЙ Калькулятор 0.2\n Я вмію тільки додавати 2 цілих числа")
+    print("Вас вітає НеЙмОвІрНиЙ Калькулятор 0.2\n Я вмію працювати з операціями над цілими числами: '+ - * /'")
 
-    string1 = input("Введіть перше число: ")
+    int_number1 = int(input("Введіть перше ціле число: "))
 
-    string2 = input("Введіть друге число: ")
+    int_operation = int(input(
+        "Виберіть операцію(число):\n 1 - '+' \n 2 - '-' \n 3 - '/' \n 4 - '*' \n Операція:"))
 
-    num1 = int(string1)
+    int_number2 = int(input("Введіть друге ціле число: "))
 
-    num2 = int(string2)
+    if int_operation == 1:
+        result = addition(int_number1, int_number2)
+    elif int_operation == 2:
+        result = subtraction(int_number1, int_number2)
+    elif int_operation == 3:
+        result = division(int_number1, int_number2)
+    elif int_operation == 4:
+        result = multiplication(int_number1, int_number2)
+    else:
+        result = "Невідома операція"
 
-    sum = num1 + num2
+    print("Результат: ", result)
 
-    print(num1, "+", num2, "=", sum)
+
+def addition(number1,  number2):
+    return '{0} + {1} = {2}'.format(number1, number2, number1 + number2)
+
+
+def subtraction(number1,  number2):
+    return '{0} - {1} = {2}'.format(number1, number2, number1 - number2)
+
+
+def division(number1,  number2):
+    return '{0} / {1} = {2}'.format(number1, number2, number1 / number2)
+
+
+def multiplication(number1,  number2):
+    return '{0} * {1} = {2}'.format(number1, number2, number1 * number2)
 
 
 calculator()
