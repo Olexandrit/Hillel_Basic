@@ -25,7 +25,7 @@ def count_symbol_in_string(string):
 
 def symbols_in_string():
 
-    print("Привіт я вмію рахувати кількість символів в рядку!:)")
+    print("Привіт, я вмію рахувати кількість символів в рядку!:)")
 
     string = input("Введіть рядок символів: ")
 
