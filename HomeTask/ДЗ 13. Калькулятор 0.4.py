@@ -15,8 +15,8 @@ def calculator():
 
     list_operation_note = []
     for key in operations_dict:
-        str = f'{key} -> "{operations_dict[key]}"'
-        list_operation_note.append(str)
+        string = f'{key} -> "{operations_dict[key]}"'
+        list_operation_note.append(string)
 
     str_operations = '\n'.join(list_operation_note)
 
@@ -54,29 +54,34 @@ def input_numbers():
 
 
 def input_number1():
-    string = input("Введіть перше число: ")
 
-    number = 0
+    string = "Введіть перше число: "
 
-    try:
-        number = float(string)
-    except:
-        print("Це не число. Введіть перше число!")
-        return input_number1()
+    number = input_number(string)
 
     return number
 
 
 def input_number2():
-    string = input("Введіть друге число: ")
+
+    string = "Введіть друге число: "
+
+    number = input_number(string)
+
+    return number
+
+
+def input_number(input_text):
 
     number = 0
+
+    string = input(input_text)
 
     try:
         number = float(string)
     except:
-        print("Це не число. Введіть друге число!")
-        return input_number2()
+        print("Це не число. Введіть число!")
+        return input_number(input_text)
 
     return number
 
@@ -115,12 +120,12 @@ def speed_sum():
 
     while True:
 
-        str = input("Введіть ціле число(Пробіл - вихід і вивід суми): ")
+        string = input("Введіть ціле число(Пробіл - вихід і вивід суми): ")
 
-        if str == " ":
+        if string == " ":
             return sum(list_numbers)
-        elif str.isdigit():
-            list_numbers.append(int(str))
+        elif string.isdigit():
+            list_numbers.append(int(string))
         else:
             print("Це не число!!!")
 
