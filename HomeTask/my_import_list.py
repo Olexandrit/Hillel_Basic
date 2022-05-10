@@ -37,6 +37,12 @@ def my_sorted_list(list_not_sort):
 
 def generate_list(start, stop, count_numbers=15):
 
+    """Generate new list random int
+    :param start:(int) number start
+    :param stop:(int) number stop
+    :param count_numbers: (int) count number
+    :return: list generate numbers
+    """
     new_list = random.sample(range(start, stop), count_numbers)
 
     random.shuffle(new_list)

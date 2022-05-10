@@ -7,15 +7,16 @@
 #
 # 3. Відсортувати згенерований список створеною функцією та вивести відсортований список.
 
+
 import my_import_list as mil
 
-start = 1
+START = 1
 
-stop = 100
+STOP = 100
 
-count_number = 15
+COUNT_NUMBER = 15
 
-list_not_sort = mil.generate_list(start, stop, count_number)
+list_not_sort = mil.generate_list(START, STOP, COUNT_NUMBER)
 
 print(list_not_sort)
 
