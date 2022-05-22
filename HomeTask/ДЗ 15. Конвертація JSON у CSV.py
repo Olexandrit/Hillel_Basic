@@ -19,6 +19,7 @@ P.s. Результатом вашого домашнього завдання,
 import pandas as pd
 
 
+# Read json file and convert to dataframe
 def read_json(file_json):
     """
         use pandas for read json file
@@ -33,6 +34,7 @@ def read_json(file_json):
     return data_frame
 
 
+# Df_query is a function that takes a dataframe and a query string as parameters and returns a dataframe.
 def df_query(data_frame, query_str):
 
     """
