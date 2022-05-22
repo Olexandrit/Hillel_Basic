@@ -6,6 +6,7 @@
 /.idea/modules.xml
 /.idea/vcs.xml
 /.idea/workspace.xml
+/.idea
 /venv/Lib/site-packages/_distutils_hack/__init__.py
 /venv/Lib/site-packages/_distutils_hack/override.py
 /venv/Lib/site-packages/pip/_internal/cli/__init__.py
